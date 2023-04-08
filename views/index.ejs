@@ -5,10 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorie Counter</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Track the calories from your food and drinks.</h1>
+
+	<!--	<div class="col-md-offset-1 col-md-10 col-sm-12">
+
+				<h1>Fitness is Coming</h1>
+                <h3>Login to track your calories</h3>
+				<a href="/login">LOGIN</a>
+                <a href="/signup">SIGN UP</a>
+
+			</div>-->	
+
+            <div class="loginbox">
+                <img src="images/heart-beat.png" class="avatar">
+                <h1>Login Here</h1>
+                <% if (locals.messages.errors) { %>
+                    <% messages.errors.forEach( el => { %>
+                        <div class="alert alert-danger"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <% if (locals.messages.info) { %>
+                    <% messages.info.forEach( el => { %>
+                        <div class="alert alert-danger"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <form action="/login" method="POST">
+                    <p>Username</p>
+                    <input type="email" name="email" placeholder="Email">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="submit">
+                </form>
+                <h3>No account? <a href="/signup">SIGN UP</a></h3>
+            </div>
+
+  <!-- <h1>Track the calories from your food and drinks.</h1>
     <a href="/login"> Login</a>
-    <a href="/signup"> Signup</a>
+    <a href="/signup"> Signup</a> --> 
+      
+    
 </body>
 </html>

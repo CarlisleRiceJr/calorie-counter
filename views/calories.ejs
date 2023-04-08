@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Calorie Counter</h1> 
+      <section class="white-container">
+        <h1>Calorie Counter</h1> 
        <div class="flex-container">
             <ul class="row">
                 <li class="title">Food</li>
@@ -25,11 +26,12 @@
           <% calories.forEach( el => { %> 
             <% sum += el.calories %>
           <% }) %>
-        
+       
           <h2 class="forum">Total Calories: <%= sum %> </h2>
 
 
     <!--<h2><%= user.userName %> has <%= left %> things left to do.</h2>-->
+    <section class="enter-food">
     <span class="forum">
     <form action="/calories/createCalories" method='POST'>
         <p>Enter food or beverage</p>
@@ -39,9 +41,10 @@
         <input type="submit">
     </form>
     </span>
-
     <a href="/logout">Logout</a>
-
+    </section>
+      
+        </section>
     <script src="js/main.js"></script>
 </body>
 </html>
